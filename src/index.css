@@ -1,14 +1,164 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Karla, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #f5f7fb;
+}
+
+#root {
+  height: 100%;
+  min-height: 100%;
+}
+
+main {
+  height: 100%;
+  min-height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-family: Inter;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.btn.primary {
+  background-color: #4d5b9e;
+  border-radius: 15px;
+  font-family: "Inter";
+  text-align: center;
+  color: #f5f7fb;
+  padding: 16px 28px;
+  min-width: 200px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: semibold;
+}
+
+.question-group {
+  margin-bottom: 1rem;
+}
+
+.question {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-button {
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  border: 1px solid #4d5b9e;
+  border-radius: 8px;
+  color: #293264;
+  transition: all 0.3s ease;
+}
+
+.radio-button.selected {
+  border-color: #d6dbf5;
+  background-color: #d6dbf5;
+}
+
+.submitted .radio-button {
+  opacity: 0.5;
+}
+
+.submitted .radio-button.selected {
+  background-color: #f8bcbc;
+}
+
+.submitted .radio-button.correct {
+  background-color: #94d7a2;
+}
+
+.submitted .radio-button.correct {
+  opacity: inherit;
+}
+
+.radio-button input {
+  display: none;
+  /* Hide the default radio button */
+}
+
+.radio-button:hover {
+  background-color: #e2e6ea;
+}
+
+.radio-button input:checked + label,
+.radio-button input:checked {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #0056b3;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #dbdef0;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.submitted .bottom-container {
+  justify-content: space-between;
+}
+
+.bottom-container p {
+  color: #293264;
+  font-family: Inter, sans-serif;
+  font-weight: bold;
 }
